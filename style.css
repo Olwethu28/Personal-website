@@ -96,16 +96,21 @@ h2 {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    padding-bottom: 15%;
+
 }
 
 .project-card:hover {
     transform: translateY(-10px);
+    
 }
 
 .project-card img {
-    width: 40%;
-    height: 150px;
+    width: 20%;
+    height: 30%;
     object-fit:contain;
+    padding-bottom: 80%;
+    align-items: center;
 }
 
 footer {
@@ -152,6 +157,7 @@ nav a:hover {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease, transform 0.3s ease;
+    padding-bottom: 80%;
 }
 
 #contact a:hover {
@@ -164,6 +170,7 @@ nav a:hover {
     justify-content: center;
     gap: 20px; /* Space between links */
     margin-top: 20px;
+    padding-bottom: 15%;
 }
 
 #contact .contact-links a {
