@@ -227,7 +227,7 @@ nav a:hover {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .project-card {
         background: gray;
         border: 1px solid gray;
