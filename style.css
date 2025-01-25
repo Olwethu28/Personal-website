@@ -236,8 +236,15 @@ nav a:hover {
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
-        padding-bottom: 60%;
+        padding-bottom: 90%;
     
+    }
+    #contact .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Space between links */
+        margin-top: 20px;
+        padding-bottom: 80%;
     }
     .hamburger {
         display: block; /* Show hamburger icon */
