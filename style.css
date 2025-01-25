@@ -96,7 +96,7 @@ h2 {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    padding-bottom: 40%;
+    padding-bottom: 25%;
 
 }
 
@@ -228,6 +228,17 @@ nav a:hover {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    .project-card {
+        background: gray;
+        border: 1px solid gray;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        padding-bottom: 25%;
+    
+    }
     .hamburger {
         display: block; /* Show hamburger icon */
     }
