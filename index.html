@@ -11,7 +11,7 @@
     <header>
         <div class="container">
             <h1>👋 Welcome to my Website</h1>
-            <p>I'm a beginner</p>
+        
             <button class="hamburger" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
@@ -32,10 +32,10 @@
                 <img src="images/profile.jpg" alt="My Profile Picture">
                 <p>
                     Hi! I'm Olwethu Manqola, a dedicated and passionate developer and lifelong learner. 
-                    I have just started with my career of being a developer.
-                    I love solving problems.
-                    An energetic and ambitious individual. Organized and detailed-oriented.
+                    I enjoy solving problems through code and building meaningful digital experiences.
+                    I'm energetic, ambitious, and detail-oriented — always eager to grow and improve.
                 </p>
+                
             </div>
         </div>
     </section>
@@ -101,10 +101,14 @@
     document.addEventListener("DOMContentLoaded", () => {
         const hamburger = document.querySelector(".hamburger");
         const navLinks = document.querySelector(".nav-links");
+        const icon = hamburger.querySelector("i");
 
         hamburger.addEventListener("click", () => {
             navLinks.classList.toggle("active");
+            icon.classList.toggle("fa-bars");
+            icon.classList.toggle("fa-times"); // toggles to close icon
         });
     });
 </script>
+
 
