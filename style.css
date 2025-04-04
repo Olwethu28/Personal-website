@@ -340,7 +340,6 @@ nav a:hover {
 
     nav.nav-links.active {
         display: flex; /* Show links when active */
-        max-height: 300px;
     }
     
 }
