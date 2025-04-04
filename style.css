@@ -329,9 +329,6 @@ nav a:hover {
         top: 60px;
         right: 20px;
         z-index: 1000;
-        transition: max-height 0.3s ease;
-        overflow: hidden;
-        max-height: 0;
     }
 
     nav.nav-links a {
