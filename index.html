@@ -1,114 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Stack Developer Portfolio</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #f9f9f9; transition: background 0.3s, color 0.3s; }
+
+    header { background: #222; color: #fff; padding: 2rem 1rem; text-align: center; }
+    header h1 { font-size: 2.5rem; }
+    header p { font-size: 1.2rem; margin-top: 0.5rem; }
+
+    nav { background: #444; display: flex; justify-content: center; flex-wrap: wrap; }
+    nav a { color: #fff; padding: 1rem; text-decoration: none; }
+    nav a:hover { background: #333; }
+
+    main { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+    section { margin-bottom: 3rem; }
+    section h2 { margin-bottom: 1rem; color: #222; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; }
+
+    .about, .skills, .projects, .contact { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: background 0.3s, color 0.3s; }
+
+    .skills ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.5rem; list-style: none; }
+    .skills li { background: #eee; padding: 0.5rem; border-radius: 4px; text-align: center; }
+
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .project-card { background: #fafafa; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; transition: background 0.3s, color 0.3s; }
+    .project-card h3 { margin-bottom: 0.5rem; }
+    .project-card a { display: inline-block; margin-top: 0.5rem; color: #0066cc; text-decoration: none; }
+
+    footer { background: #222; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
+    footer a { color: #fff; text-decoration: underline; }
+
+    .theme-toggle { position: fixed; top: 1rem; right: 1rem; background: #444; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; }
+    .theme-toggle:hover { background: #333; }
+
+    /* Contact buttons */
+    .contact-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+    .contact-links a { display: flex; align-items: center; gap: 0.5rem; background: #0066cc; color: #fff; padding: 0.7rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+    .contact-links a:hover { background: #004999; }
+    .contact-links img { width: 20px; height: 20px; }
+
+    /* Dark mode */
+    body.dark { background: #121212; color: #e0e0e0; }
+    body.dark header { background: #111; }
+    body.dark nav { background: #222; }
+    body.dark nav a { color: #e0e0e0; }
+    body.dark nav a:hover { background: #111; }
+    body.dark section h2 { color: #f5f5f5; border-bottom: 2px solid #444; }
+    body.dark .about, body.dark .skills, body.dark .projects, body.dark .contact { background: #1e1e1e; color: #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.6); }
+    body.dark .skills li { background: #333; }
+    body.dark .project-card { background: #1a1a1a; border-color: #333; }
+    body.dark .contact-links a { background: #333; }
+    body.dark .contact-links a:hover { background: #555; }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>👋 Welcome to my Website</h1>
-        
-            <button class="hamburger" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="nav-links">
-                <a href="#about"><i class="fas fa-user"></i> About Me</a>
-                <a href="#skills"><i class="fas fa-code"></i> Skills</a>
-                <a href="#projects"><i class="fas fa-folder-open"></i> Projects</a>
-                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-            </nav>
-        </div>
-    </header>
-    
+  <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2 style="color: white;">About Me</h2>
-            <div class="about-content">
-                <img src="images/profile.jpg" alt="My Profile Picture">
-                <p>
-                    Hi! I'm Olwethu Manqola, a dedicated and passionate developer and lifelong learner. 
-                    I enjoy solving problems through code and building meaningful digital experiences.
-                    I'm energetic, ambitious, and detail-oriented — always eager to grow and improve.
-                </p>
-                
-            </div>
-        </div>
+  <header>
+    <h1>Olwethu Manqola</h1>
+    <p>Full Stack Developer | JavaScript | Java | Python</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="cv.pdf" target="_blank">Download CV</a>
+  </nav>
+
+  <main>
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm a Full Stack Developer passionate about building scalable applications and clean user experiences. I enjoy working with modern web technologies, backend systems, and databases.</p>
     </section>
 
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 style="color: white;">Skills</h2>
-            <ul class="skills-list">
-                <li><i class="fab fa-html5"></i> HTML</li>
-                <li><i class="fab fa-css3-alt"></i> CSS</li>
-                <li><i class="fab fa-java"></i> Java</li>
-                <li><i class="fab fa-js"></i> JavaScript</li>
-                <li><i class="fas fa-code-branch"></i> Git & GitHub</li>
-            </ul>
-        </div>
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Express</li>
+        <li>MongoDB</li>
+        <li>PostgreSQL</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>Docker</li>
+        <li>Git</li>
+      </ul>
     </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 style="color: white;">Projects</h2>
-            <div class="project-card">
-                <p>No Projects yet <a href="#"></a></p>
-            </div>
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>E-commerce Platform</h3>
+          <p>A full-stack e-commerce app with authentication, payments, and product management.</p>
+          <a href="#">View Project</a>
         </div>
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>Personal portfolio showcasing skills and projects, built with HTML, CSS, and JS.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>Banking App</h3>
+          <p>Bank account management system with interest calculations and transfers.</p>
+          <a href="#">View Project</a>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            
-            <h2 style="color: white;">Contact</h2>
-            <div class="contact-links">
-                <a href="mailto: manqolaolwethu2@gmail.com">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-                <a href="https://www.linkedin.com/in/olwethu-manqola-4b4147288" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://github.com/Olwethu28" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                
-            </div>
-        </div>
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <div class="contact-links">
+        <a href="mailto:youremail@example.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"> Email</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"> LinkedIn</a>
+        <a href="https://github.com/yourprofile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub"> GitHub</a>
+        <a href="cv.pdf" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="CV"> Download CV</a>
+      </div>
     </section>
-    <div class="cv-container">
-        <button class="cv-button">
-            <a href="https://drive.google.com/file/d/12UtieefxB3hQlgipB8tXlziIBFoFbPG6/view?usp=sharing" target="_blank">
-                <i class="fas fa-file-alt"></i> Check my CV
-            </a>
-        </button>
-    </div>
-    
-    
+  </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 Olwethu Amahle | Designed with ❤️</p>
-        </div>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Olwethu Manqola. Built with ❤️</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      const btn = document.querySelector('.theme-toggle');
+      if (document.body.classList.contains('dark')) {
+        btn.textContent = '☀️ Light Mode';
+      } else {
+        btn.textContent = '🌙 Dark Mode';
+      }
+    }
+  </script>
 </body>
 </html>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-        const icon = hamburger.querySelector("i");
-
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-            icon.classList.toggle("fa-bars");
-            icon.classList.toggle("fa-times"); // toggles to close icon
-        });
-    });
-</script>
-
-
