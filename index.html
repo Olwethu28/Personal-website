@@ -1,146 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Full Stack Developer Portfolio</title>
-  <style>
-    /* Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #f9f9f9; transition: background 0.3s, color 0.3s; }
-
-    header { background: #222; color: #fff; padding: 2rem 1rem; text-align: center; }
-    header h1 { font-size: 2.5rem; }
-    header p { font-size: 1.2rem; margin-top: 0.5rem; }
-
-    nav { background: #444; display: flex; justify-content: center; flex-wrap: wrap; }
-    nav a { color: #fff; padding: 1rem; text-decoration: none; }
-    nav a:hover { background: #333; }
-
-    main { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
-    section { margin-bottom: 3rem; }
-    section h2 { margin-bottom: 1rem; color: #222; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; }
-
-    .about, .skills, .projects, .contact { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: background 0.3s, color 0.3s; }
-
-    .skills ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.5rem; list-style: none; }
-    .skills li { background: #eee; padding: 0.5rem; border-radius: 4px; text-align: center; }
-
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-    .project-card { background: #fafafa; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; transition: background 0.3s, color 0.3s; }
-    .project-card h3 { margin-bottom: 0.5rem; }
-    .project-card a { display: inline-block; margin-top: 0.5rem; color: #0066cc; text-decoration: none; }
-
-    footer { background: #222; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
-    footer a { color: #fff; text-decoration: underline; }
-
-    .theme-toggle { position: fixed; top: 1rem; right: 1rem; background: #444; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; }
-    .theme-toggle:hover { background: #333; }
-
-    /* Contact buttons */
-    .contact-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
-    .contact-links a { display: flex; align-items: center; gap: 0.5rem; background: #0066cc; color: #fff; padding: 0.7rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
-    .contact-links a:hover { background: #004999; }
-    .contact-links img { width: 20px; height: 20px; }
-
-    /* Dark mode */
-    body.dark { background: #121212; color: #e0e0e0; }
-    body.dark header { background: #111; }
-    body.dark nav { background: #222; }
-    body.dark nav a { color: #e0e0e0; }
-    body.dark nav a:hover { background: #111; }
-    body.dark section h2 { color: #f5f5f5; border-bottom: 2px solid #444; }
-    body.dark .about, body.dark .skills, body.dark .projects, body.dark .contact { background: #1e1e1e; color: #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.6); }
-    body.dark .skills li { background: #333; }
-    body.dark .project-card { background: #1a1a1a; border-color: #333; }
-    body.dark .contact-links a { background: #333; }
-    body.dark .contact-links a:hover { background: #555; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olwethu Manqola - Software Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
 
-  <header>
-    <h1>Olwethu Manqola</h1>
-    <p>Full Stack Developer | JavaScript | Java | Python</p>
-  </header>
+    <header>
+        <nav>
+            <div class="logo">Olwethu</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle">🌙</button>
+        </nav>
+    </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <a href="cv.pdf" target="_blank">Download CV</a>
-  </nav>
+    <main>
+        <section id="hero">
+            <h1>Hi, I'm Olwethu Manqola 👋</h1>
+            <p class="subtitle">A Software Developer passionate about building clean, efficient, and user-friendly applications.</p>
+            <div class="hero-links">
+                <a href="https://github.com/Olwethu28" target="_blank" class="cta-button">View GitHub</a>
+                <a href="https://linkedin.com/in/olwethu-manqola" target="_blank" class="cta-button secondary">Connect on LinkedIn</a>
+            </div>
+        </section>
 
-  <main>
-    <section id="about" class="about">
-      <h2>About Me</h2>
-      <p>Hello! I'm a Full Stack Developer passionate about building scalable applications and clean user experiences. I enjoy working with modern web technologies, backend systems, and databases.</p>
-    </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm a software developer based in South Africa with a passion for front-end design, data optimization, building scalable APIs.
+                I thrive on solving complex problems and turning ideas into reality. 
+            </p>
+            <p>
+                When I'm not coding, you can find me reading sci-fi novels, or contributing to open-source projects.
+            </p>
+        </section>
 
-    <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>MongoDB</li>
-        <li>PostgreSQL</li>
-        <li>Java</li>
-        <li>Python</li>
-        <li>Docker</li>
-        <li>Git</li>
-      </ul>
-    </section>
+        <section id="skills">
+            <h2>My Tech Stack 💻</h2>
+            <p>Technologies I work with regularly:</p>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>JavaScript (ES6+)</li>
+                        <li>Python</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Docker</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <section id="projects" class="projects">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>E-commerce Platform</h3>
-          <p>A full-stack e-commerce app with authentication, payments, and product management.</p>
-          <a href="#">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3>Portfolio Website</h3>
-          <p>Personal portfolio showcasing skills and projects, built with HTML, CSS, and JS.</p>
-          <a href="#">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3>Banking App</h3>
-          <p>Bank account management system with interest calculations and transfers.</p>
-          <a href="#">View Project</a>
-        </div>
-      </div>
-    </section>
+        <section id="projects">
+            <h2>Projects I've Built</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <img src= ""  alt="Project 1 Screenshot">
+                    <h3>Node & File I/O</h3>
+                    <p>A backend script for capturing student inquiry data at Umuzi. This project uses a custom Visitor class to store information and saves/loads each visitor's data to/from a separate JSON file using Node.js file system methods.</p>
+                    <div class="project-tech">
+                        <span>Javascript</span>
+                        <span>Node.js</span>
+                        <span>Jasmine</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Umuzi-org/Olwethu-Manqola-280-node-file-io-javascript" target="_blank">View Code</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://support.microsoft.com/en-us/office/capture-a-picture-of-your-project-plan-7d83707f-6b1a-4680-a102-f1f5a84f15c4" alt="Project 2 Screenshot">
+                    <h3>ShoppingCart Calculations</h3>
+                    <p>A data-processing module to analyze e-commerce shopping cart data from a JSON source. This project involved writing a suite of functions to extract key business insights, such as calculating total customer spending, identifying top customers, and aggregating stock required for delivery. </p>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>Node.js</span>
+                        <span>JSON</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Umuzi-org/Olwethu-Manqola-705-contentitem-javascript" target="_blank">View Code</a>
+                    </div>
+                </div>
 
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <div class="contact-links">
-        <a href="mailto:youremail@example.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"> Email</a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"> LinkedIn</a>
-        <a href="https://github.com/yourprofile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub"> GitHub</a>
-        <a href="cv.pdf" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="CV"> Download CV</a>
-      </div>
-    </section>
-  </main>
+                </div>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 Olwethu Manqola. Built with ❤️</p>
-  </footer>
+        <section id="contact">"
+            <h2>Get In Touch 📬</h2>
+            <p>I'm currently open to new opportunities and collaborations. Feel free to send me a message!</p>
+            <a href="mailto:manqolaolwethu2@gmail.com" class="cta-button">Say Hello</a>
+        </section>
+    </main>
 
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark');
-      const btn = document.querySelector('.theme-toggle');
-      if (document.body.classList.contains('dark')) {
-        btn.textContent = '☀️ Light Mode';
-      } else {
-        btn.textContent = '🌙 Dark Mode';
-      }
-    }
-  </script>
+    <footer>
+        <p>&copy; 2025 Olwethu Manqola. Built with HTML, CSS, and a dash of ☕.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
