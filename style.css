@@ -303,3 +303,32 @@ footer {
         flex-direction: column;
     }
 }
+
+body.dark-mode {
+background-color: #121212;
+color: white;
+}
+
+body.dark-mode header {
+background-color: #1e1e1e;
+}
+
+body.dark-mode nav a {
+color: white;
+}
+
+body.dark-mode .project-card {
+background-color: #1e1e1e;
+color: white;
+}
+
+body.dark-mode .skill-category {
+background-color: #1e1e1e;
+color: white;
+}
+
+body.dark-mode footer {
+background-color: #1e1e1e;
+color: white;
+}
+
